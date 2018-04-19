@@ -50,15 +50,6 @@ def parser(url_dc,url_html):
                 print(title)
                 save_file(url,title)
 
-        """for link in internal.find_all('img',style="cursor:pointer;"):
-            href=str(link)
-            url=href.split("'")[1]
-            for link in internal.find_all('li',class_="icon_pic"):
-                for download in link.findAll('a'):
-                    title=download.text
-                    #print(url)
-                    save_file(url,title)"""
-
 def save_file(url,title):
     var = 0
     while 1: #file save after overlap check
