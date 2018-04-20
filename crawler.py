@@ -53,10 +53,10 @@ def parser(url_dc,url_html):
 def save_file(url,title):
     var = 0
     while 1: #file save after overlap check
-        res = os.path.exists("C:\\Users\\kwkim_000\\PycharmProjects\\croller\\result\\%s"%title)
+        res = os.path.exists("C:\\Users\\%s"%title)
         if res == False:
             try:
-                f = open("C:\\Users\\kwkim_000\\PycharmProjects\\croller\\result\\%s"%title, 'wb')
+                f = open("C:\\Users\\%s"%title, 'wb')
                 img = urllib.request.Request(url)
                 f.write(urllib.request.urlopen(img).read())
                 f.close()
